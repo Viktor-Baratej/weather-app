@@ -1,0 +1,129 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #7d83f5;
+  --secondary-color: #78e8ee;
+  --background-dark: #242424;
+  --background-light: #ffffff;
+  --text-dark: #213547;
+  --text-light: rgba(255, 255, 255, 0.87);
+  --border-radius: 10px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: var(--text-light);
+  background-color: var(--background-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.app_container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  transition: font-size 0.3s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .app_container {
+    max-width: 100%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .app_container {
+    max-width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app_container {
+    max-width: 90%;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+}
